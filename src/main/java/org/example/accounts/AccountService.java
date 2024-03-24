@@ -9,6 +9,7 @@ public class AccountService {
     static {
         loginToProfile.put("admin", new UserProfile("admin", "1", "email@email.ru"));
     }
+
     public static void AddNewUser(UserProfile user) {
         loginToProfile.put(user.getLogin(), user);
     }
