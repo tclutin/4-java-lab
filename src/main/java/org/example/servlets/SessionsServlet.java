@@ -15,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 
 @WebServlet("/")
 public class SessionsServlet extends HttpServlet {
+
     private final String fileManagerPath = "C:\\Users\\Lutin\\fileManager\\";
 
     @Override
