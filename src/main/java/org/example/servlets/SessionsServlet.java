@@ -21,7 +21,9 @@ public class SessionsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = (String)req.getSession().getAttribute("login");
-        if (login != null) {
+
+        UserProfile user = AccountService.getUserByLogin(login);
+        if (user != null) {
             String encodePath = URLEncoder.encode(fileManagerPath + login, "UTF-8");
             resp.sendRedirect(req.getContextPath() + "/files?path=" + encodePath);
             return;
