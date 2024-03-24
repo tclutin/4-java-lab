@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 @WebServlet("/")
 public class SessionsServlet extends HttpServlet {
     private final String fileManagerPath = "C:\\Users\\Lutin\\fileManager\\";
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = (String)req.getSession().getAttribute("login");
